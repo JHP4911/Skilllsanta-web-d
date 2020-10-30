@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main" id="list">
+        <ul id="sachin">
+            <li>Ansible</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Openshift</li>
+            <li>Web Developement</li>
+        </ul>
+    </div>
+    <div class="btn">
+        <button type="button" onclick="order_list()">Order</button>
+        <button type="button" onclick="unorder_list()">Un Order</button>
+    </div>
+    <script>
+        function order_list() {
+            let data = document.getElementsByTagName("ul")[0];
+            let data2 = document.createElement("ol");
+            data2.innerHTML = data.innerHTML;
+            data.parentNode.replaceChild(data2, data)
+        }
+
+        function unorder_list() {
+            let data = document.getElementsByTagName("ol")[0];
+            let data2 = document.createElement("ul");
+            data2.innerHTML = data.innerHTML;
+            data.parentNode.replaceChild(data2, data)
+        }
+    </script>
+</body>
+
+</html>

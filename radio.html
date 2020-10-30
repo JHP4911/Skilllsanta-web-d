@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        Choose the course? <br>
+        <input type="radio" name="course" id="ansible">Ansible <br>
+        <input type="radio" name="course" id="js">Java Script
+    </form>
+    <br>
+    <button onclick="check()">Check ansible</button>
+    <button onclick="uncheck()">Check JS</button>
+
+    <script>
+        function check() {
+            document.getElementById("ansible").checked = true;
+        }
+
+        function uncheck() {
+            document.getElementById("js").checked = true;
+        }
+    </script>
+</body>
+
+</html>

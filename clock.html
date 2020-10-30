@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        #clock {
+            font-size: 80px;
+            width: 500px;
+            margin: 100px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">10:00:10</div>
+    <button>12 Hour</button>
+    <button>24 Hour</button>
+    <script>
+        setInterval(showTime, 1000);
+        //  setTimeout(showTime, 5000);
+
+        function showTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+
+            let final = hour + ":" + min + ":" + sec;
+            document.getElementById("clock").innerHTML = final;
+        }
+    </script>
+</body>
+
+</html>
